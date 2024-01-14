@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= userId %></title>
+  <title>Cats Names</title>
 </head>
 <body>
-    <h1><%= userId%></h1>
-    <h1><%= id%></h1>
-    <h2><%= title%></h2>
-    <p><%= body%></p>
+  <h1>All cats Names</h1>
+  <ul>
+ <% for ( cat of cats ) { %>
+  <li><%= cat%></li>
+  <%}%>
+</ul>
 </body>
 </html>
 
