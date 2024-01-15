@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cats Names</title>
-</head>
-<body>
+<%- include('partiels/head')%>
   <h1>All cats Names</h1>
   <ul>
  <% for ( cat of cats ) { %>
   <li><%= cat%></li>
   <%}%>
 </ul>
-</body>
-</html>
+<%- include('partiels/footer')%>
 
 

@@ -3,8 +3,11 @@ const app = express();
 const path = require('path');
 const redditData = require('./data.json');
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
+app.set('public', path.join(__dirname, '/views'));
 
 
 app.get('/' , function(req, res){
@@ -32,7 +35,7 @@ app.get('/r/:subreddit' , function(req, res){
   res.render('subreddit', {...data});
 });
 app.get('*' , function(req, res){
-  res.send('OUPS i dont know what you are talking about');
+  res.render('notFound');
 });
 
 
